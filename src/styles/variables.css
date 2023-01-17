@@ -1,4 +1,6 @@
 :root {
+  --base-font-size: 16px;
+
   /* -- COLORS */
   --color-black: #000;
   --color-white: #fff;
@@ -13,7 +15,7 @@
 
   /* -- SIZES */
   --container-width-max: 60rem;
-  --block-padding: 1rem;
+  --block-padding: 2.5rem;
   --header-height: 128px;
 
   /* -- THEME: LIGHT */
@@ -47,9 +49,10 @@
   --star-filled-color: var(--color-yellow);
 }
 
-/* increase padding on larger screens */
-@media screen and (min-width: 480px) {
+/* decrease sizes on larger screens */
+@media screen and (max-width: 480px) {
   :root {
-    --block-padding: 2.5rem;
+    --base-font-size: 13px;
+    --block-padding: 1rem;
   }
 }
