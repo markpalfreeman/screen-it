@@ -23,6 +23,10 @@ function AddMovieForm({ addMovie }) {
       category,
       rating,
     });
+
+    setName("");
+    setCategory("");
+    setRating(null);
   }
   return (
     <form className="add-movie-form block" onSubmit={handleSubmit}>
@@ -43,21 +47,22 @@ function AddMovieForm({ addMovie }) {
           <select
             id={FIELD_ID.CATEGORY}
             defaultValue=""
+            value={category}
             onChange={(event) => setCategory(event.target.value)}
           >
             <option value="">Select a category</option>
-            <option value="action">Action/Adventure</option>
-            <option value="animation">Animation</option>
-            <option value="comedy">Comedy</option>
-            <option value="crime">Crime</option>
-            <option value="drama">Drama</option>
-            <option value="documentary">Documentary</option>
-            <option value="history">History</option>
-            <option value="horror">Horror</option>
-            <option value="musical">Musical</option>
-            <option value="romance">Romance</option>
-            <option value="scifi">Sci-Fi</option>
-            <option value="thriller">Thriller</option>
+            <option value="Action/Adventure">Action/Adventure</option>
+            <option value="Animation">Animation</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Crime">Crime</option>
+            <option value="Drama">Drama</option>
+            <option value="Documentary">Documentary</option>
+            <option value="History">History</option>
+            <option value="Horror">Horror</option>
+            <option value="Musical">Musical</option>
+            <option value="Romance">Romance</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+            <option value="Thriller">Thriller</option>
           </select>
         </div>
       </div>
