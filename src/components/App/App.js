@@ -8,23 +8,27 @@ import "./App.css";
 const initialMovies = [
   {
     id: nanoid(),
-    category: "Science Fiction-fi",
+    category: "Sci-Fi",
     name: "Interstellar",
+    rating: 5,
   },
   {
     id: nanoid(),
-    category: "Science Fiction-fi",
-    name: "Interstellar",
+    category: "Animation",
+    name: "Moana",
+    rating: 4,
   },
   {
     id: nanoid(),
-    category: "Science Fiction-fi",
-    name: "Interstellar",
+    category: "Comedy",
+    name: "Ace Ventura When Nature Calls",
+    rating: 4,
   },
   {
     id: nanoid(),
     category: "kasdfkj",
     name: "aksjdfkasdf",
+    rating: 3,
   },
 ];
 
@@ -38,9 +42,8 @@ function App() {
   return (
     <div className="app">
       <AppHeader></AppHeader>
-      <main>
+      <main className="container">
         <AddMovieForm addMovie={addMovie}></AddMovieForm>
-        <hr />
         {movies.map((movie) => (
           <MovieCard key={movie.id} {...movie}></MovieCard>
         ))}

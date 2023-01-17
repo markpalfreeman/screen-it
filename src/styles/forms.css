@@ -1,0 +1,86 @@
+/*
+  FORM CONTROLS
+*/
+
+/* unify heights of controls and groups */
+.form-group,
+.control {
+  height: 3em;
+}
+
+.control,
+.button {
+  line-height: 1.5;
+  padding: 1em;
+  border-radius: calc(1 / 3 * 1em);
+}
+
+.control {
+  font-weight: 300;
+  border: 1px solid var(--form-field-border-color);
+}
+
+.control::placeholder {
+  color: var(--form-field-text-color);
+}
+
+/* -- BUTTON */
+
+.button {
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: linear-gradient(
+    to top,
+    var(--button-color-hsl-base),
+    var(--button-color-hsl-fade)
+  );
+  border: 1px solid var(--button-color-hsl-base);
+  color: var(--button-text-color);
+  cursor: pointer;
+  border: 1px solid var(--button-color-hsl-base);
+  width: 100%;
+  box-shadow: 0 2px 4px var(--button-shadow-color-1),
+    0 4px 8px var(--button-shadow-color-2);
+}
+
+/* -- SELECT */
+
+/* custom select */
+.select {
+  padding: 0;
+  /* define grid area to ease arrow placement */
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+}
+
+select,
+.select::after {
+  grid-area: select;
+}
+
+.select::after {
+  content: "";
+  width: 0.625em;
+  height: 0.55em;
+  margin-inline-end: 1em;
+  background-color: var(--form-field-border-color);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  justify-self: end;
+}
+
+.select select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  border-radius: calc(1 / 3 * 1em);
+  padding: 0.5em 2.5em 0.5em 1em;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* match "placeholder" color when no selection is made */
+.select.no-selection select {
+  color: var(--form-field-text-color);
+}

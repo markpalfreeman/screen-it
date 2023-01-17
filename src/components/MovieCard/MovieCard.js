@@ -1,15 +1,20 @@
 import { MovieAvatar } from "../MovieAvatar";
 import { StarRating } from "../StarRating";
+import "./MovieCard.css";
 
 function MovieCard({ name, category, rating }) {
   return (
-    <div className="movie-card">
-      <MovieAvatar name={name}></MovieAvatar>
-      <div className="movie-card--title">
-        <h3>{name}</h3>
-        <p>{category}</p>
+    <div className="movie-card block">
+      <div className="movie-card__avatar">
+        <MovieAvatar name={name}></MovieAvatar>
       </div>
-      <StarRating rating={rating}></StarRating>
+      <div className="movie-card__info">
+        <h3 className="movie-card__title">{name}</h3>
+        <p className="movie-card__category">{category}</p>
+      </div>
+      <div className="movie-card__rating">
+        <StarRating rating={rating}></StarRating>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,7 @@
+.star-icon path {
+  fill: var(--star-unfilled-color);
+}
+
+.star-icon.filled path {
+  fill: var(--star-filled-color);
+}

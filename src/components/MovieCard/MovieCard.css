@@ -1,2 +1,31 @@
 .movie-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.movie-card__avatar,
+.movie-card__rating {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.movie-card__info {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.movie-card__info > * {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.movie-card__title {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.movie-card__category {
+  color: var(--text-color-secondary);
 }

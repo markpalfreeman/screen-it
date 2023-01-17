@@ -1,2 +1,14 @@
 .movie-avatar {
+  font-size: 1.5em;
+  width: 4rem;
+  height: 4rem;
+  background: var(--avatar-background-color);
+  color: var(--avatar-text-color);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.movie-avatar.small-text {
+  font-size: 1em;
 }
