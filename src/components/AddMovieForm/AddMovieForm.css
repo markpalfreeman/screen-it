@@ -1,5 +1,5 @@
 .add-movie-form {
-  font-size: 1.5rem;
+  font-size: var(--form-font-size);
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -13,10 +13,12 @@
 }
 
 .add-movie-form label {
+  flex-shrink: 0;
   width: 7ch;
   font-weight: 500;
 }
 
 .add-movie-form .control {
   flex-grow: 1;
+  min-width: 0;
 }

@@ -3,7 +3,7 @@
 }
 
 .star-rating svg {
-  width: 2rem;
+  width: var(--star-size);
   margin-inline-start: 0.125em;
 }
 

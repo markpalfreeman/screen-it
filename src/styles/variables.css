@@ -13,6 +13,8 @@
 
   /* -- SIZES */
   --base-font-size: 16px;
+  --form-font-size: 1.5rem;
+  --star-size: 2rem;
   --container-width-max: 60rem;
   --block-padding: 2.5rem;
   --header-height: 128px;
@@ -57,5 +59,7 @@
   :root {
     --base-font-size: 13px;
     --block-padding: 1rem;
+    --form-font-size: 1.2rem;
+    --star-size: 1.5rem;
   }
 }
