@@ -1,6 +1,4 @@
 :root {
-  --base-font-size: 16px;
-
   /* -- COLORS */
   --color-black: #000;
   --color-white: #fff;
@@ -14,6 +12,7 @@
   --color-yellow: #ffc93d;
 
   /* -- SIZES */
+  --base-font-size: 16px;
   --container-width-max: 60rem;
   --block-padding: 2.5rem;
   --header-height: 128px;

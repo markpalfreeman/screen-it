@@ -49,6 +49,7 @@ function AddMovieForm({ addMovie }) {
             defaultValue=""
             value={category}
             onChange={(event) => setCategory(event.target.value)}
+            className={`${!category ? "no-selection" : ""}`}
           >
             <option value="">Select a category</option>
             <option value="Action/Adventure">Action/Adventure</option>

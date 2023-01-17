@@ -46,7 +46,8 @@ button {
     0 4px 8px var(--button-shadow-color-2);
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   background: linear-gradient(
     to top,
     var(--button-color-hsl-dark),
@@ -97,6 +98,6 @@ select,
 }
 
 /* match "placeholder" color when no selection is made */
-.select.no-selection select {
+.select select.no-selection {
   color: var(--form-field-text-color);
 }

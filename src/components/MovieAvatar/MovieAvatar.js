@@ -12,9 +12,7 @@ function MovieAvatar({ name }) {
   const initials = formatInitials(name);
 
   return (
-    <div
-      className={`movie-avatar ${initials.length > 2 ? "small-text" : null}`}
-    >
+    <div className={`movie-avatar ${initials.length > 2 ? "small-text" : ""}`}>
       {initials}
     </div>
   );
