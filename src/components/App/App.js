@@ -21,14 +21,14 @@ const initialMovies = [
   {
     id: nanoid(),
     category: "Comedy",
-    name: "Ace Ventura When Nature Calls",
+    name: "Ace Ventura: When Nature Calls",
     rating: 4,
   },
   {
     id: nanoid(),
-    category: "kasdfkj",
-    name: "aksjdfkasdf",
-    rating: 3,
+    category: "Comedy",
+    name: "The Sandlot",
+    rating: 4,
   },
 ];
 
