@@ -26,21 +26,37 @@
 
 /* -- BUTTON */
 
+button {
+  cursor: pointer;
+}
+
 .button {
   font-size: 1.5rem;
   font-weight: 500;
   background: linear-gradient(
     to top,
     var(--button-color-hsl-base),
-    var(--button-color-hsl-fade)
+    var(--button-color-hsl-light)
   );
   border: 1px solid var(--button-color-hsl-base);
   color: var(--button-text-color);
-  cursor: pointer;
   border: 1px solid var(--button-color-hsl-base);
   width: 100%;
   box-shadow: 0 2px 4px var(--button-shadow-color-1),
     0 4px 8px var(--button-shadow-color-2);
+}
+
+.button:hover {
+  background: linear-gradient(
+    to top,
+    var(--button-color-hsl-dark),
+    var(--button-color-hsl-base)
+  );
+}
+
+.button:active {
+  scale: 0.99;
+  box-shadow: none;
 }
 
 /* -- SELECT */

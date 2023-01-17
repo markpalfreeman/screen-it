@@ -10,16 +10,20 @@ export const FIELD_ID = {
 };
 
 function AddMovieForm({ addMovie }) {
+  const [name, setName] = React.useState("");
+  const [category, setCategory] = React.useState("");
+  const [rating, setRating] = React.useState(null);
+
   function handleSubmit(event) {
     event.preventDefault();
 
     addMovie({
       id: nanoid(),
-      name: "test-name",
-      category: "test-category",
+      name,
+      category,
+      rating,
     });
   }
-
   return (
     <form className="add-movie-form block" onSubmit={handleSubmit}>
       <div className="form-group">
@@ -29,12 +33,18 @@ function AddMovieForm({ addMovie }) {
           id="new-movie-title"
           type="text"
           placeholder="Name of the movie"
+          onChange={(event) => setName(event.target.value)}
+          value={name}
         />
       </div>
       <div className="form-group">
         <label htmlFor={FIELD_ID.CATEGORY}>Category</label>
         <div className="select control">
-          <select id={FIELD_ID.CATEGORY} defaultValue="">
+          <select
+            id={FIELD_ID.CATEGORY}
+            defaultValue=""
+            onChange={(event) => setCategory(event.target.value)}
+          >
             <option value="">Select a category</option>
             <option value="action">Action/Adventure</option>
             <option value="animation">Animation</option>
@@ -46,7 +56,7 @@ function AddMovieForm({ addMovie }) {
             <option value="horror">Horror</option>
             <option value="musical">Musical</option>
             <option value="romance">Romance</option>
-            <option value="scifi">Sci-fi</option>
+            <option value="scifi">Sci-Fi</option>
             <option value="thriller">Thriller</option>
           </select>
         </div>
@@ -54,7 +64,8 @@ function AddMovieForm({ addMovie }) {
       <div className="form-group">
         <label htmlFor={FIELD_ID.RATING}>Rating</label>
         <StarRating
-          rateMovie={(rating) => alert("rate: ", rating)}
+          rating={rating}
+          setRating={(value) => setRating(value)}
         ></StarRating>
       </div>
       <button type="submit" className="button">

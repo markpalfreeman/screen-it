@@ -36,7 +36,7 @@ function App() {
   const [movies, setMovies] = useState(initialMovies);
 
   function addMovie(movie) {
-    setMovies([...movies, movie]);
+    setMovies([movie, ...movies]);
   }
 
   return (

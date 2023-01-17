@@ -31,9 +31,13 @@
   --button-color-hsl-base: hsl(
     var(--color-blue-hue) var(--color-blue-sat) var(--color-blue-lum)
   );
-  --button-color-hsl-fade: hsl(
+  --button-color-hsl-light: hsl(
     var(--color-blue-hue) var(--color-blue-sat)
       calc(var(--color-blue-lum) + 10%)
+  );
+  --button-color-hsl-dark: hsl(
+    var(--color-blue-hue) var(--color-blue-sat)
+      calc(var(--color-blue-lum) - 20%)
   );
   --button-shadow-color-1: hsl(
     var(--color-blue-hue) var(--color-blue-sat) var(--color-blue-lum) / 50%
@@ -49,7 +53,7 @@
   --star-filled-color: var(--color-yellow);
 }
 
-/* decrease sizes on larger screens */
+/* decrease sizes on small screens */
 @media screen and (max-width: 480px) {
   :root {
     --base-font-size: 13px;
