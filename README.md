@@ -1,8 +1,8 @@
 # Screen It
 
-Mock application to view and rank movies.
+Mock application to rate movies.
 
-🚀 **Deployed URL:** https://{screen-it}.netlify.app
+🚀 **Deployed URL:** [https://screen-it.netlify.app](https://screen-it.netlify.app)
 
 ## 🧱 Setup
 
