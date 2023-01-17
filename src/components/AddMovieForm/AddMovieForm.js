@@ -14,8 +14,16 @@ function AddMovieForm({ addMovie }) {
   const [category, setCategory] = React.useState("");
   const [rating, setRating] = React.useState(null);
 
+  const isValid = () => !!name && !!category && !!rating;
+
   function handleSubmit(event) {
     event.preventDefault();
+
+    // TODO: enhance validation to accessible, on-screen messages
+    if (!isValid()) {
+      alert("Please complete all fields to add a movie!");
+      return;
+    }
 
     addMovie({
       id: nanoid(),
@@ -28,6 +36,7 @@ function AddMovieForm({ addMovie }) {
     setCategory("");
     setRating(null);
   }
+
   return (
     <form className="add-movie-form block" onSubmit={handleSubmit}>
       <div className="form-group">
@@ -46,7 +55,6 @@ function AddMovieForm({ addMovie }) {
         <div className="select control">
           <select
             id={FIELD_ID.CATEGORY}
-            defaultValue=""
             value={category}
             onChange={(event) => setCategory(event.target.value)}
             className={`${!category ? "no-selection" : ""}`}
